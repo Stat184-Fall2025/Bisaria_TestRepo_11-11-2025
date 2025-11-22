@@ -1,3 +1,4 @@
-# Bisaria_TestRepo_11-11-2025
-Test Repository - Stat 184 
-# Hello World
+# Activity 15
+## GITHUB Practice
+
+In this repository, you will see Activity 14 and the Quarto Reports generated. 
