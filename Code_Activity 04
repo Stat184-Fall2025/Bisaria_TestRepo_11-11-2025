@@ -1,0 +1,50 @@
+# Activity 04 --Functions in R
+# Goal: Determine the side length of the square cutouts that will lead to the box with the largest volume.
+# Input: Takes in side light of cut out length x 
+#' @returns side lengths in inches
+
+
+volumeOfBox <- function(x){
+  #In the problem description we are asked to assume that we have a standard sheet of letter paper: 8.5 inches by 11 inches.
+  LENGTH = 11 
+  WIDTH = 8.5
+  
+  volume <- x*(LENGTH-2*x)*(WIDTH-2*x)
+  
+  if(x<=0 || x>= min(LENGTH, WIDTH){
+    return("Value of Side Length(x) is too large or invalid.")
+  }
+  
+  x_interval <- seq(from = 0, to = max_x, by = 0.05) 
+  volume_interval <- x_interval * (LENGTH - 2 * x_interval) * (WIDTH - 2 * x_interval)
+  
+  plot(
+    x = x_interval
+    y = volume_interval
+    type = "l"
+  )
+    
+  
+  return(volume)
+
+}
+
+#Goal: Transform the given integer until n = 1
+
+collatz_Conjecturs <- function(n)
+  list =[]
+  count = 0
+  
+  while( n!= 1): 
+  
+    if (n%%2 == 0){
+      list.append(n)
+      n <- n/2
+      count += 1
+    }
+     
+    else{
+      list.append(n)
+      n<-3 *n+1
+      count += 1
+    }
