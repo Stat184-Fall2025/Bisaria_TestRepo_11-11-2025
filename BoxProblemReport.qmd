@@ -1,0 +1,30 @@
+---
+title: "Box Problem Report"
+author: "Ayushi Bisaria"
+format: pdf
+
+date: "11/12/2025"
+---
+
+# Plotting a Mathematical Function: Box Problem
+
+### Starting with a rectangular piece of paper, we can create an open-top box by cutting out equal squares from each of the four corners and folding up the sides. The size of the cut-out squares determines the dimensions and volume of the resulting box. We can explore how the volume changes with different square side lengths by plotting the volume as a function of the cut-out size.
+
+## Running Code
+volumeOfBox <- function(x){
+  #In the problem description, we are asked to assume that we have a standard           #sheet of letter paper: 36 inches by 48 inches.
+
+  volume = 0
+  LENGTH = 36
+  WIDTH = 48     
+  
+  volume <- x*(LENGTH-2*x)*(WIDTH-2*x)
+  
+  if(runif(volume)<0){
+    return("Value of Side Length(x) is too large.")
+  }
+  
+  return(volume)
+  
+}
+

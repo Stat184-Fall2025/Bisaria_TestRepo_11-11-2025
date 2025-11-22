@@ -1,0 +1,63 @@
+---
+title: "Armed Force Data Report"
+author: "Ayushi Bisaria"
+
+date: "11/12/2025"
+
+
+format: pdf
+
+### Description of Data Visualization: Looking at the two-way frequency table for Army Enlisted personnel, it’s clear that there are far more males than females across all pay grades. The difference becomes especially obvious in the higher ranks (E6–E9), where very few females are represented. This suggests that sex and rank aren’t independent in this group, since the distribution of ranks is heavily weighted toward males.
+
+---
+---
+
+# Load required packages
+library(tidyverse)
+library(janitor)
+
+# Step 1: Read Data 
+armed_raw <- read.csv("US_Armed_Force_Data.csv")
+
+# Step 2: Clean names for consistency 
+armed_clean <- armed_raw 
+  clean_names()
+
+# Step 3: Reshape from wide to long format 
+armed_long <- armed_clean
+  pivot_longer(
+    cols = -pay_grade,
+    names_to = c("branch", "sex"),
+    names_sep = "\\."
+  ) 
+  mutate(
+    count = as.numeric(gsub(",", "", value)),  # remove commas and convert to numeric
+    branch = str_replace_all(branch, "_", " "),
+    sex = str_to_title(sex)
+  ) %>%
+  select(pay_grade, branch, sex, count)
+
+# Step 4: Filter to a valid subgroup 
+army_enlisted <- armed_long 
+  filter(branch == "Army", str_detect(pay_grade, "^E"))
+
+# Step 5: Create a two-way frequency table 
+freq_table <- army_enlisted 
+  group_by(pay_grade, sex) 
+  summarise(total = sum(count, na.rm = TRUE)) 
+  pivot_wider(names_from = sex, values_from = total, values_fill = 0)
+  # Filter data for Army Enlisted only
+  
+  # Step 6: Two Way Frequency Table
+  army_enlisted <- combined_armed_data %>%
+    filter(branch_name == "Army", rank_name %in% c("Private", "Corporal", "Sergeant"))
+  
+  freq_table <- table(army_enlisted$sex, army_enlisted$rank_name)
+
+  
+# Step 7: View results 
+print(freq_table)
+
+  
+
+
