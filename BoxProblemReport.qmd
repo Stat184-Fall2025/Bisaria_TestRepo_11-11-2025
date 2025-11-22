@@ -63,11 +63,5 @@ volumeOfBox <- function(x){
   return(volume)
   
 }
-```
-
-```{r code-appendix, echo=FALSE}
-# Auto-generate code appendix
-knitr::purl("current_file.qmd", documentation = 2)
-```
 
 
