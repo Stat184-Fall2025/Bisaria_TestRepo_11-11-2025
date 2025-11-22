@@ -1,9 +1,12 @@
 ---
 title: "Box Problem Report"
 author: "Ayushi Bisaria"
+date: "2025-11-12"
 format: pdf
-
-date: "11/12/2025"
+execute:
+  echo: true
+  warning: false
+  message: false
 ---
 
 # Plotting a Mathematical Function: Box Problem
