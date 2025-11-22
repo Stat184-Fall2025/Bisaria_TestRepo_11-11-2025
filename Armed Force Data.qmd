@@ -1,13 +1,13 @@
 ---
 title: "Armed Force Data Report"
 author: "Ayushi Bisaria"
-
 date: "11/12/2025"
-
-
 format: pdf
+---
 
-### Description of Data Visualization: Looking at the two-way frequency table for Army Enlisted personnel, it’s clear that there are far more males than females across all pay grades. The difference becomes especially obvious in the higher ranks (E6–E9), where very few females are represented. This suggests that sex and rank aren’t independent in this group, since the distribution of ranks is heavily weighted toward males.
+
+### Description of Data Visualization
+Looking at the two-way frequency table for Army Enlisted personnel, it’s clear that there are far more males than females across all pay grades. The difference becomes especially obvious in the higher ranks (E6–E9), where very few females are represented. This suggests that sex and rank aren’t independent in this group, since the distribution of ranks is heavily weighted toward males.
 
 ---
 ---
