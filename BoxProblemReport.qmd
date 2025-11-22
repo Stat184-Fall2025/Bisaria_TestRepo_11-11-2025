@@ -13,7 +13,20 @@ execute:
 
 ### Starting with a rectangular piece of paper, we can create an open-top box by cutting out equal squares from each of the four corners and folding up the sides. The size of the cut-out squares determines the dimensions and volume of the resulting box. We can explore how the volume changes with different square side lengths by plotting the volume as a function of the cut-out size.
 
+### Problem Overview
+
+The original sheet of paper has dimensions of 36 inches by 48 inches. When squares of side length x are removed from each corner, the height of the box becomes x, and the base dimensions become (36 − 2x) by (48 − 2x). This allows us to express the volume as a function of x.
+
+### Purpose of the Analysis
+
+The goal is to understand how the volume changes as the side length of the cut-out squares increases. By plotting the volume function, we can determine the side length that produces the maximum box volume and gain insight into the relationship between dimensions and capacity.
+
+### What We Can Learn
+
+From this model, we observe that the volume increases up to a certain point before decreasing as x becomes too large, since the base dimensions shrink. This demonstrates the concept of maximizing a function and highlights how mathematical modeling can inform practical design decisions.
+
 ## Running Code
+
 volumeOfBox <- function(x){
   #In the problem description, we are asked to assume that we have a standard           #sheet of letter paper: 36 inches by 48 inches.
 
